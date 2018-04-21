@@ -1,0 +1,70 @@
+$var: white
+@mixin  border-radius($radius) 
+	-webkit-border-radius: $radius
+	-ms-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+#all
+	background-color: #e5eaee
+	display: flex
+
+	.image
+		margin: 2%
+		width: 48%
+		border: 1px solid gray
+		background-color: $var
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+		transition: all 1s
+
+		
+		img
+			width: 100%
+			height: 80%
+		h2
+			font-size: 5vw
+			margin: 0% 2%
+			font-family: Arial, Helvetica, sans-serif
+			font-weight: lighter
+		h3
+			@extend h2
+			color: #8c8c8c
+			font-size: 2.6vw
+			font-family: Arial, Helvetica, sans-serif 
+			
+
+	.heading1
+
+		color: #2fa8d1
+		
+
+
+	.heading2 
+
+		color: #8c8c8c
+
+	.image:hover
+		@include border-radius (20px)
+		background-color: #98d0e2 
+
+	.heading2:hover
+
+		
+		color: $var	
+
+
+@media screen and (max-width: 400px) 
+	body
+		background-color: #0497f2
+   
+
+@media screen and (min-width: 401px) and (max-width: 600px)	
+	body 
+		background-color: #6ecbea
+   
+
+
+	
